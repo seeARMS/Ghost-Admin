@@ -25,7 +25,7 @@
                                             <span class="page">Page</span>
                                         {{else}}
                                             <time datetime="{{post.publishedAt}}" class="date published">
-                                                Published {{gh-format-timeago post.publishedAt}}
+                                                Published {{gh-format-timeago post.publishedAt}} {{#if post.tags}} in {{#each post.tags as |tag index|}} <span class="tag-name">{{tag.name}}</span> {{/each}} {{/if}}
                                             </time>
                                         {{/if}}
                                     {{else}}
